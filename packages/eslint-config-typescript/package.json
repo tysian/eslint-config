@@ -1,0 +1,27 @@
+{
+  "name": "@tysian/eslint-config-typescript",
+  "version": "0.1.0",
+  "description": "",
+  "author": "Jakub Bazgier <kuba@tysian.pl> (https://github.com/tysian/)",
+  "license": "MIT",
+  "homepage": "https://github.com/tysian/eslint-config",
+  "keywords": [
+    "eslint-config"
+  ],
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "peerDependencies": {
+    "eslint": ">=7.4.0",
+    "typescript": ">=3.9"
+  },
+  "dependencies": {
+    "@tysian/eslint-config": "workspace:*",
+    "@typescript-eslint/eslint-plugin": "^5.59.0",
+    "@typescript-eslint/parser": "^5.59.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.38.0"
+  }
+}

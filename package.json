@@ -1,0 +1,27 @@
+{
+  "name": "@tysian/eslint-config-monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@8.3.0",
+  "author": {
+    "name": "Jakub Bazgier",
+    "url": "https://github.com/tysian"
+  },
+  "license": "MIT",
+  "scripts": {
+    "lint": "pnpm -r run stub && eslint .",
+    "test": "pnpm -r run test",
+    "build": "pnpm -r run build",
+    "prepare": "pnpm -r run stub",
+    "release": "bumpp -r && pnpm -r publish"
+  },
+  "devDependencies": {
+    "@tysian/eslint-config": "workspace:*",
+    "@tysian/eslint-config-react": "workspace:*",
+    "@tysian/eslint-config-typescript": "workspace:*",
+    "bumpp": "^9.1.0",
+    "eslint": "^8.38.0",
+    "rimraf": "^5.0.0",
+    "typescript": "^5.0.4"
+  }
+}
