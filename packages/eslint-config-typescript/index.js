@@ -1,12 +1,12 @@
 const fs = require('node:fs');
 const path = require('node:path');
-const base = require('@tysian/eslint-config-base');
+const base = require('@tysian/eslint-config');
 
 const tsconfig = process.env.ESLINT_TSCONFIG || 'tsconfig.eslint.json';
 
 module.exports = {
   extends: [
-    '@tysian/eslint-config-base',
+    '@tysian',
     'plugin:import/typescript',
     'plugin:@typescript-eslint/recommended',
   ],
@@ -50,6 +50,8 @@ module.exports = {
               '@typescript-eslint/no-unsafe-return': 'error',
               'require-await': 'off',
               '@typescript-eslint/require-await': 'error',
+              'no-return-await': 'off',
+              '@typescript-eslint/return-await': 'error',
               '@typescript-eslint/restrict-plus-operands': 'error',
               '@typescript-eslint/restrict-template-expressions': 'error',
               '@typescript-eslint/unbound-method': 'error',
@@ -72,8 +74,6 @@ module.exports = {
     '@typescript-eslint/no-array-constructor': 'off',
     'no-extra-semi': 'off',
     '@typescript-eslint/no-extra-semi': 'off',
-    'no-implied-eval': 'off',
-    '@typescript-eslint/no-implied-eval': 'error',
     'no-loop-func': 'off',
     '@typescript-eslint/no-loop-func': 'off',
     'no-magic-numbers': 'off',
@@ -88,8 +88,6 @@ module.exports = {
     ],
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': 'off',
-    'no-throw-literal': 'off',
-    '@typescript-eslint/no-throw-literal': 'error',
     'no-unused-expressions': 'off',
     '@typescript-eslint/no-unused-expressions': [
       'error',
@@ -99,9 +97,6 @@ module.exports = {
         allowTaggedTemplates: true,
       },
     ],
-    'require-await': 'off',
-    '@typescript-eslint/require-await': 'error',
-    '@typescript-eslint/return-await': ['error', 'in-try-catch'],
     '@typescript-eslint/ban-ts-comment': [
       'error',
       { 'ts-ignore': 'allow-with-description' },
@@ -202,6 +197,7 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/ban-types': 'off',
     '@typescript-eslint/triple-slash-reference': 'off',
+    '@typescript-eslint/consistent-type-definitions': 'off',
     // handled by unused-imports/no-unused-imports
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
