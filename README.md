@@ -24,7 +24,7 @@ npm install eslint @tysian/eslint-config --save-dev
 npm install eslint @tysian/eslint-config-typescript --save-dev
 ```
 
-### TypeScript Aware Rules
+#### TypeScript Aware Rules
 
 Type aware rules are enabled when a tsconfig.eslint.json is found in the project root, which will introduce some stricter rules into your project. If you want to enable it while have no tsconfig.eslint.json in the project root, you can change tsconfig name by modifying ESLINT_TSCONFIG env.
 
@@ -45,8 +45,6 @@ module.exports = {
 npm install eslint @tysian/eslint-config-react --save-dev
 ```
 
-> **Note** `.eslintignore` already provided in config
-
 ### Prettier
 
 Recommended to use along with [prettier](https://github.com/prettier/prettier):
@@ -56,6 +54,8 @@ npm install prettier eslint-config-prettier --save-dev
 ```
 
 ## Config `.eslintrc`
+
+> **Note** `.eslintignore` already provided in config
 
 ```json
 {
