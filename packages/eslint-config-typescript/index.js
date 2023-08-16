@@ -163,6 +163,7 @@ module.exports = {
     ],
     'no-dupe-class-members': 'off',
     '@typescript-eslint/no-dupe-class-members': 'error',
+    'import/consistent-type-specifier-style': ['error', 'prefer-top-level'],
     'no-extra-parens': 'off',
     '@typescript-eslint/no-extra-parens': [
       'off',
