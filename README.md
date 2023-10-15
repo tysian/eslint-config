@@ -26,7 +26,7 @@ npm install eslint @tysian/eslint-config-typescript --save-dev
 
 #### TypeScript Aware Rules
 
-Type aware rules are enabled when a `tsconfig.eslint.json` is found in the project root, which will introduce some stricter rules into your project. 
+Type aware rules are enabled when a `tsconfig.eslint.json` is found in the project root, which will introduce some stricter rules into your project.
 
 If you want to enable it while have no `tsconfig.eslint.json` in the project root, you can change tsconfig name by modifying `ESLINT_TSCONFIG` env.
 
@@ -41,7 +41,7 @@ module.exports = {
 
 ### Install with React
 
-> **Note** Base & typescript configs included
+> [!NOTE] Base & typescript configs included
 
 ```bash
 npm install eslint @tysian/eslint-config-react --save-dev
