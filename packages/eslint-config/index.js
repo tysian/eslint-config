@@ -48,6 +48,36 @@ module.exports = {
     'plugin:eslint-comments/recommended',
     'plugin:no-template-curly-in-string-fix/recommended'
   ],
+  ignorePatterns: [
+    '**/node_modules',
+    '**/dist',
+    '**/package-lock.json',
+    '**/yarn.lock',
+    '**/pnpm-lock.yaml',
+    '**/bun.lockb',
+
+    '**/dist',
+    '**/build',
+    '**/output',
+    '**/coverage',
+    '**/temp',
+    '**/.vitepress/cache',
+    '**/.nuxt',
+    '**/.next',
+    '**/.vercel',
+    '**/.changeset',
+    '**/.idea',
+    '**/.cache',
+    '**/.output',
+    '**/.vite-inspect',
+
+    '**/CHANGELOG*.md',
+    '**/*.min.*',
+    '**/LICENSE*',
+    '**/__snapshots__',
+    '**/auto-import?(s).d.ts',
+    '**/components.d.ts',
+  ],
   rules: {
     'accessor-pairs': 'off',
     'array-bracket-newline': ['off', 'consistent'],
@@ -111,7 +141,7 @@ module.exports = {
     'import/no-deprecated': 'off',
     'import/no-duplicates': 'error',
     'import/no-dynamic-require': 'error',
-    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    'import/no-extraneous-dependencies': ['error', { packageDir: './' }],
     'import/no-import-module-exports': ['error', { exceptions: [] }],
     'import/no-internal-modules': ['off', { allow: [] }],
     'import/no-mutable-exports': 'error',
@@ -297,7 +327,7 @@ module.exports = {
     'no-unused-expressions': ['error',{allowShortCircuit: true,allowTernary: true,allowTaggedTemplates: true,},],
     'no-unused-labels': 'error',
     'no-unused-private-class-members': 'off',
-    'no-unused-vars': ['error', { vars: 'all', args: 'after-used', ignoreRestSiblings: true }],
+    'no-unused-vars': "off", // handled by unused-imports
     'no-use-before-define': ['error', { functions: false, classes: false, variables: true }],
     'no-useless-backreference': 'error',
     'no-useless-call': 'off',
@@ -383,7 +413,7 @@ module.exports = {
     'unicorn/prefer-text-content': 'error', // textContent instead of innerText
     'unicorn/prefer-type-error': 'error', // Enforce throwing type error when throwing error while checking typeof
     'unicorn/throw-new-error': 'error', // Use new when throwing error
-    'unused-imports/no-unused-imports': 'error',
+    'unused-imports/no-unused-imports': 'off',
     'unused-imports/no-unused-vars': ['warn',{vars: 'all',varsIgnorePattern: '^_',args: 'after-used',argsIgnorePattern: '^_',},],
     'valid-jsdoc': 'off',
     'valid-typeof': ['error', { requireStringLiterals: true }],
