@@ -19,9 +19,9 @@
     "@tysian/eslint-config": "workspace:*",
     "@tysian/eslint-config-react": "workspace:*",
     "@tysian/eslint-config-typescript": "workspace:*",
-    "bumpp": "^9.1.0",
-    "eslint": "^8.38.0",
-    "rimraf": "^5.0.0",
-    "typescript": "^5.0.4"
+    "bumpp": "^9.2.0",
+    "eslint": "^8.52.0",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.2.2"
   }
 }
